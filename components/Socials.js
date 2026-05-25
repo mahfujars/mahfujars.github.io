@@ -7,6 +7,7 @@ import {
   RiFacebookLine,
   RiTwitterLine,
   RiGithubLine,
+  RiGitlabLine,
   RiLinkedinLine,
   RiWhatsappLine} from 'react-icons/ri'
 
@@ -16,8 +17,11 @@ const Socials = () => {
       <Link href={'https://www.linkedin.com/in/mrnoyon/'} className="hover:text-accent transition-all duration-300">
         <RiLinkedinLine/>
       </Link>
-      <Link href={'https://github.com/iamnoyon'} className="hover:text-accent transition-all duration-300">
+      <Link href={'https://github.com/mahfujars'} className="hover:text-accent transition-all duration-300">
         <RiGithubLine/>
+      </Link>
+      <Link href={'https://gitlab.com/mahfujars'} className="hover:text-accent transition-all duration-300">
+        <RiGitlabLine/>
       </Link>
       <Link href={'https://www.facebook.com/mr.9on/'} className="hover:text-accent transition-all duration-300">
         <RiFacebookLine/>

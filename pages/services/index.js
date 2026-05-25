@@ -31,8 +31,7 @@ const Services = () => {
               animate='show'
               exit='hidden' 
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-              Pariatur irure mollit consequat aliquip ad ad est proident mollit qui cillum laboris do excepteur.
-              Pariatur irure mollit consequat aliquip ad ad est proident mollit qui cillum laboris do excepteur.
+              Web crawling, anti-bot bypass, ETL, and backend engineering — built in Python for teams that need data they can trust at scale.
             </motion.p>
           </div>
           <motion.div

@@ -1,5 +1,41 @@
+// components
+import TestimonialSlider from '../../components/TestimonialSlider';
+import Circles from '../../components/Circles';
+import Bulb from '../../components/Bulb';
+
+// framer motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
+
 const Testimonials = () => {
-  return <div>Testimonials</div>;
+  return (
+    <div className='h-full bg-primary/30 py-36 flex items-center'>
+      <Circles />
+      <div className='container mx-auto h-full flex flex-col justify-center'>
+        {/* text */}
+        <motion.h2
+          variants={fadeIn('up', 0.2)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='h2 mb-8 xl:mb-0 text-center'
+        >
+          What clients <span className='text-accent'>say.</span>
+        </motion.h2>
+        {/* slider */}
+        <motion.div
+          variants={fadeIn('up', 0.4)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='xl:max-w-[1000px] mx-auto'
+        >
+          <TestimonialSlider />
+        </motion.div>
+      </div>
+      <Bulb />
+    </div>
+  );
 };
 
 export default Testimonials;
