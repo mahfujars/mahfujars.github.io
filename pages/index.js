@@ -24,6 +24,29 @@ const Home = () => {
       {/* content */}
       <div className="relative z-10 h-full flex flex-col justify-center pt-20 sm:pt-24 xl:pt-0 pb-24 xl:pb-0">
         <div className="container mx-auto h-full flex flex-col justify-center text-center xl:text-left">
+          {/* mobile avatar */}
+          <motion.div
+            variants={fadeIn('down', 0.1)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="xl:hidden flex justify-center mb-6 sm:mb-8"
+          >
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48">
+              <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(241,48,36,0.6)_0%,rgba(241,48,36,0.15)_50%,transparent_80%)] blur-xl"></div>
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_25px_rgba(241,48,36,0.4)]">
+                <Image
+                  src="/avatars/my_img.png"
+                  alt="Mahfujar Rahman"
+                  width={200}
+                  height={200}
+                  priority
+                  className="w-full h-full object-cover object-top scale-110"
+                />
+              </div>
+            </div>
+          </motion.div>
+
           {/* title */}
           <motion.h2
             variants={fadeIn('down', 0.2)}
