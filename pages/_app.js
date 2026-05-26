@@ -1,4 +1,7 @@
 import '../styles/globals.css';
+import 'nprogress/nprogress.css';
+
+import { useEffect } from 'react';
 
 // next
 import Head from 'next/head';
@@ -13,8 +16,25 @@ import { useRouter } from 'next/router';
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
 
+// nprogress
+import NProgress from 'nprogress';
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    NProgress.configure({ showSpinner: false, trickleSpeed: 120 });
+    const start = () => NProgress.start();
+    const done = () => NProgress.done();
+    router.events.on('routeChangeStart', start);
+    router.events.on('routeChangeComplete', done);
+    router.events.on('routeChangeError', done);
+    return () => {
+      router.events.off('routeChangeStart', start);
+      router.events.off('routeChangeComplete', done);
+      router.events.off('routeChangeError', done);
+    };
+  }, [router]);
   return (
     <>
       <Head>

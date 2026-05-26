@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* nprogress accent color */
+#nprogress .bar {
+  background: #f13024 !important;
+  height: 2px !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #f13024, 0 0 5px #f13024 !important;
+}
+
 .translate-z-0 {
   transform: translateZ(0px);
 }
