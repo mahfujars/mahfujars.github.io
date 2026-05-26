@@ -1,28 +1,23 @@
-// next image
-import Image from "next/image";
-
-//next link
+// next link
 import Link from "next/link";
-
-//icons
-import {HiArrowRight} from 'react-icons/hi2';
 
 const ProjectsBtn = () => {
   return (
-    <div className="mx-auto xl:mx-0">
-      <Link 
-      href={'/work'} 
-      className="relative w-[120px] xl:w-[150px] h-[120px] xl:h-[150px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group">
-        <Image 
-          src={'/rounded-text.png'}
-          width={111}
-          height={118}
-          alt=""
-          className="animate-spin-slow w-full h-full max-w-[91px] xl:max-w-[111px] max-h-[98px] xl:max-h-[118px]"
-          />
-        <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300" />
-      </Link>
-    </div>
+    <Link
+      href="/work"
+      aria-label="View my projects"
+      className="group relative inline-flex items-center rounded-lg overflow-hidden p-[1.5px]"
+    >
+      {/* animated conic gradient border */}
+      <span className="absolute inset-0 bg-[conic-gradient(from_0deg,#F13024,#fb923c,#f59e0b,#F13024,#ec4899,#F13024)] animate-[spin_6s_linear_infinite]"></span>
+      {/* inner content */}
+      <span className="relative inline-flex items-center gap-2 px-5 py-3 rounded-[6px] bg-black/80 backdrop-blur font-mono text-sm text-white/90">
+        <span className="text-accent">$</span>
+        <span className="opacity-80">cd</span>
+        <span className="text-accent">./projects</span>
+        <span className="ml-2 inline-block w-2 h-4 bg-accent animate-pulse"></span>
+      </span>
+    </Link>
   );
 };
 
