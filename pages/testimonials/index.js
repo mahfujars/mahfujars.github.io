@@ -9,26 +9,24 @@ import { fadeIn } from '../../variants';
 
 const Testimonials = () => {
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
+    <div className='h-full bg-primary/30 pt-20 sm:pt-24 xl:pt-0 pb-24 xl:pb-0 relative flex items-center'>
       <Circles />
-      <div className='container mx-auto h-full flex flex-col justify-center'>
-        {/* text */}
+      <div className='container mx-auto flex flex-col justify-center w-full'>
         <motion.h2
           variants={fadeIn('up', 0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='h2 mb-8 xl:mb-0 text-center'
+          className='h2 mb-4 xl:mb-8 text-center'
         >
           What clients <span className='text-accent'>say.</span>
         </motion.h2>
-        {/* slider */}
         <motion.div
           variants={fadeIn('up', 0.4)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='xl:max-w-[1000px] mx-auto'
+          className='w-full max-w-[900px] mx-auto'
         >
           <TestimonialSlider />
         </motion.div>

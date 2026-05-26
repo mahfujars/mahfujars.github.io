@@ -57,48 +57,24 @@ export const aboutData = [
   {
     title: "awards",
     info: [
-      {
-        title: "ACM-ICPC Asia Dhaka Regional Contestant",
-        stage: "2019",
-      },
-      {
-        title: "Top Earner — LEDP Web Design & Development, ICT Division",
-        stage: "2020",
-      },
-      {
-        title: "Assistant Country Director — International Youth Summit",
-        stage: "—",
-      },
-      {
-        title: "Campus Ambassador — ICT Olympiad Bangladesh",
-        stage: "—",
-      },
+      { title: "ACM-ICPC Asia Dhaka Regional", stage: "2019" },
+      { title: "LEDP Top Earner — ICT Division", stage: "2020" },
+      { title: "Asst. Country Director — Youth Summit", stage: "—" },
+      { title: "Campus Ambassador — ICT Olympiad BD", stage: "—" },
     ],
   },
   {
     title: "experience",
     info: [
-      {
-        title: "Python Data Engineer — LOBSTR.IO (France, Remote)",
-        stage: "Oct 2022 — Present",
-      },
-      {
-        title: "Junior IT Executive — WSDA New Zealand, Dhaka",
-        stage: "Aug 2022 — Oct 2022",
-      },
+      { title: "Python Data Engineer — LOBSTR.IO", stage: "Oct 2022 — Present" },
+      { title: "Junior IT Executive — WSDA NZ", stage: "Aug — Oct 2022" },
     ],
   },
   {
     title: "credentials",
     info: [
-      {
-        title: "B.Sc. in CSE — University of Rajshahi (Rangpur Eng. College)",
-        stage: "2017 — 2022",
-      },
-      {
-        title: "H.S.C. in Science — Devi Chowdhurani Degree College, Rangpur",
-        stage: "2015 — 2016",
-      },
+      { title: "B.Sc. CSE — University of Rajshahi", stage: "2017 — 2022" },
+      { title: "H.S.C. Science — Devi Chowdhurani College", stage: "2015 — 2016" },
     ],
   },
 ];
@@ -116,7 +92,7 @@ import CountUp from "react-countup";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 pt-20 sm:pt-24 xl:pt-0 pb-24 xl:pb-0 text-center xl:text-left relative">
       <Circles />
 
       {/* avatar img */}
@@ -129,9 +105,10 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+
+      <div className="container mx-auto h-full flex flex-col xl:flex-row items-center justify-center gap-4 xl:gap-x-6">
         {/* text */}
-        <div className="flex-1 flex flex-col pl-0 xl:pl-[80px] justify-center">
+        <div className="flex-1 flex flex-col xl:pl-[80px] justify-center w-full">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -146,13 +123,12 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-4 xl:mb-10 px-2 xl:px-0"
+            className="max-w-[600px] mx-auto xl:mx-0 mb-4 xl:mb-8 px-2 xl:px-0 text-xs sm:text-sm xl:text-base"
           >
-            I&apos;m Mahfujar — a Python Data Engineer at{" "}
-            <span className="text-white font-medium">lobstr.io</span>, building
-            large-scale web crawlers and ETL pipelines. I bypass anti-bot
-            systems like Datadome and PerimeterX, design fault-tolerant
-            scrapers, and ship data that downstream teams can actually trust.
+            I&apos;m Mahfujar — Python Data Engineer at{" "}
+            <span className="text-white font-medium">lobstr.io</span>. I build
+            large-scale crawlers, bypass Datadome/PerimeterX, and ship
+            ETL pipelines downstream teams trust.
           </motion.p>
           {/* counter */}
           <motion.div
@@ -160,43 +136,39 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-4 xl:mb-8"
           >
-            <div className="flex flex-1 xl:gap-x-6">
-              {/* experience */}
+            <div className="flex flex-1 gap-x-3 sm:gap-x-6 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
                   <CountUp start={0} end={3} duration={4} />+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  years of experience
+                <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
+                  years exp
                 </div>
               </div>
-              {/* crawlers */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
                   <CountUp start={0} end={40} duration={6} />+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  crawlers shipped
+                <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
+                  crawlers
                 </div>
               </div>
-              {/* records */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
                   <CountUp start={0} end={10} duration={6} />M+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  records extracted
+                <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
+                  records
                 </div>
               </div>
-              {/* anti-bot */}
               <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
                   <CountUp start={0} end={5} duration={6} />+
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  anti-bot systems bypassed
+                <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
+                  anti-bot
                 </div>
               </div>
             </div>
@@ -209,9 +181,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex-1 flex flex-col w-full xl:max-w-[48%] h-[200px] xl:h-[320px]"
+          className="flex-1 flex flex-col w-full xl:max-w-[48%]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-3 xl:mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -219,7 +191,7 @@ const About = () => {
                   className={`${
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize text-xs sm:text-sm xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -227,22 +199,20 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-1 xl:py-4 flex flex-col gap-y-1 sm:gap-y-2 xl:gap-y-3 items-center xl:items-start min-h-[140px] xl:min-h-[200px]">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60 text-xs sm:text-sm xl:text-base"
                 >
-                  {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className="font-light">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* icons */}
+                  <div className="flex gap-x-3 xl:gap-x-4">
                     {item.icons?.map((icon, iconIndex) => {
                       return (
-                        <div key={iconIndex} className="text-2xl text-white">
+                        <div key={iconIndex} className="text-lg xl:text-2xl text-white">
                           {icon}
                         </div>
                       );

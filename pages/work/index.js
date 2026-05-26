@@ -9,12 +9,12 @@ import { fadeIn } from '../../variants';
 
 const Work = () => {
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
+    <div className='h-full bg-primary/30 pt-20 sm:pt-24 xl:pt-0 pb-24 xl:pb-0 relative flex items-center'>
       <Circles />
       <div className='container mx-auto'>
-        <div className='flex flex-col xl:flex-row gap-x-8'>
+        <div className='flex flex-col xl:flex-row gap-y-4 xl:gap-x-8'>
           {/* text */}
-          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+          <div className='text-center flex xl:w-[30vw] flex-col xl:text-left'>
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial='hidden'
@@ -29,11 +29,9 @@ const Work = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='mb-4 max-w-[400px] mx-auto lg:mx-0'
+              className='mb-4 max-w-[400px] mx-auto xl:mx-0'
             >
-              Selected projects across product design, web apps, and brand
-              experiences. Each one shipped, measured, and iterated on with
-              real users in mind.
+              Selected projects across crawlers, web apps, and data pipelines — each shipped, measured, and battle-tested.
             </motion.p>
           </div>
           {/* slider */}
