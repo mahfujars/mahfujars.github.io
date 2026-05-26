@@ -27,7 +27,7 @@ module.exports = {
         accent: '#F13024',
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
+        explosion: 'url("/bg-explosion.webp")',
         site: 'url("/site-bg.svg")',
       },
       animation: {

@@ -12,26 +12,26 @@ import Image from 'next/image';
 import { FaQuoteLeft } from 'react-icons/fa';
 
 // modules
-import { Pagination } from 'swiper';
+import { Pagination } from 'swiper/modules';
 
 // data
 const testimonialData = [
   {
-    image: '/t-avt-1.png',
+    image: '/t-avt-1.webp',
     name: 'Anne Smith',
     position: 'Product Lead, Acme Co.',
     message:
       'Mahfujar shipped a polished, performant interface ahead of schedule. Communication was crisp and design instincts were spot on.',
   },
   {
-    image: '/t-avt-2.png',
+    image: '/t-avt-2.webp',
     name: 'Jane Doe',
     position: 'Founder, Brightlab',
     message:
       'Rare combination of engineer and designer. He owned the build end-to-end and our conversion lift speaks for itself.',
   },
   {
-    image: '/t-avt-3.png',
+    image: '/t-avt-3.webp',
     name: 'John Doe',
     position: 'CTO, Northwind',
     message:

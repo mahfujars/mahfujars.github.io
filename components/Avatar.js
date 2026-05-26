@@ -8,7 +8,7 @@ const Avatar = () => {
       <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[80%] h-[70%] bg-[radial-gradient(ellipse_at_center,rgba(241,48,36,0.45)_0%,rgba(241,48,36,0.15)_40%,transparent_75%)] blur-3xl pointer-events-none"></div>
       {/* photo with fade-to-transparent mask so edges blend with site bg */}
       <Image
-        src={'/avatars/my_img.png'}
+        src={'/avatars/my_img.webp'}
         width={928}
         height={1152}
         alt="Mahfujar Rahman"

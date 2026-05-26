@@ -15,7 +15,7 @@ import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 
 // modules
-import { Pagination } from 'swiper';
+import { Pagination } from 'swiper/modules';
 
 // data — real projects from resume
 const workSlides = {

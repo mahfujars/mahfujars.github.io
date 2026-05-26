@@ -12,7 +12,7 @@ import { FaPython, FaAws, FaShieldAlt, FaFlask } from 'react-icons/fa';
 import { TbDatabaseImport, TbApi } from 'react-icons/tb';
 
 // modules
-import { FreeMode, Pagination } from 'swiper';
+import { FreeMode, Pagination } from 'swiper/modules';
 
 // data
 const serviceData = [

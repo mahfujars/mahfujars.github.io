@@ -36,7 +36,7 @@ const Home = () => {
               <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(241,48,36,0.6)_0%,rgba(241,48,36,0.15)_50%,transparent_80%)] blur-xl"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/40 shadow-[0_0_25px_rgba(241,48,36,0.4)]">
                 <Image
-                  src="/avatars/my_img.png"
+                  src="/avatars/my_img.webp"
                   alt="Mahfujar Rahman"
                   width={200}
                   height={200}
