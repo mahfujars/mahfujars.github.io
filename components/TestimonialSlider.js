@@ -18,24 +18,24 @@ import { Pagination } from 'swiper/modules';
 const testimonialData = [
   {
     image: '/t-avt-1.webp',
-    name: 'Anne Smith',
-    position: 'Product Lead, Acme Co.',
+    name: 'Sasha Bouloudnine',
+    position: 'Founder, lobstr.io',
     message:
-      'Mahfujar shipped a polished, performant interface ahead of schedule. Communication was crisp and design instincts were spot on.',
+      'One of the most dependable engineers on our team. Rigorous about data being correct, not just present, and reliable under the pressure of production systems that must not fail. He takes ownership without being asked and repeatedly went beyond the scope of his role. I recommend him without reservation.',
   },
   {
-    image: '/t-avt-2.webp',
-    name: 'Jane Doe',
-    position: 'Founder, Brightlab',
+    image: '/t-avt-2.jpg',
+    name: 'Rahim Ahmed',
+    position: 'Engineering Manager',
     message:
-      'Rare combination of engineer and designer. He owned the build end-to-end and our conversion lift speaks for itself.',
+      'Owned the crawler fleet end to end. Data-quality issues that used to take days, he caught same-day. Low-maintenance, high-trust — exactly what you want on a production scraping team.',
   },
   {
-    image: '/t-avt-3.webp',
-    name: 'John Doe',
-    position: 'CTO, Northwind',
+    image: '/t-avt-3.jpg',
+    name: 'Farhana Islam',
+    position: 'Data Lead',
     message:
-      'Reliable, thoughtful, and fast. The dashboard rewrite turned out cleaner and faster than what we had on the roadmap.',
+      'Turned a fragile scraping setup into a resumable, monitored pipeline with clean data downstream. Clear communicator and genuinely fast to ship.',
   },
 ];
 
