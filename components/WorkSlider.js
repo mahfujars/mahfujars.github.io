@@ -23,16 +23,16 @@ const workSlides = {
     {
       images: [
         {
+          title: 'bazarlens — Price Intelligence',
+          stack: 'woob · PostgreSQL · dbt · Airflow',
+          path: '/thumb2.jpg',
+          href: 'https://github.com/mahfujars/bazarlens',
+        },
+        {
           title: 'Arogga Crawler',
           stack: 'Celery · PostgreSQL · lxml',
           path: '/thumb1.jpg',
           href: 'https://github.com/mahfujars/arogga',
-        },
-        {
-          title: 'Sia.Ch Crawler',
-          stack: 'SQLAlchemy · MySQL · AES',
-          path: '/thumb2.jpg',
-          href: 'https://github.com/mahfujars/sia',
         },
         {
           title: 'SweetChat',

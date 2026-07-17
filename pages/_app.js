@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         <title>Mahfujar Rahman — Python Data Engineer</title>
         <meta
           name='description'
-          content='Mahfujar Rahman — Python Data Engineer at lobstr.io. Web crawlers, anti-bot bypass, and ETL pipelines built with Python, SQLAlchemy, PostgreSQL, and AWS.'
+          content='Mahfujar Rahman — Python Data Engineer, ex-lobstr.io, open to new roles. Web crawlers, anti-bot bypass, and ETL pipelines with Python, SQLAlchemy, PostgreSQL, dbt, and Airflow.'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='theme-color' content='#131424' />

@@ -17,7 +17,7 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\n${message}`
     );
-    window.location.href = `mailto:mrnoyon.cse@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:mahfujarx@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${body}`;
   };
@@ -42,8 +42,8 @@ const Contact = () => {
             exit='hidden'
             className='flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-white/60 mb-4 xl:mb-6 text-xs sm:text-sm tracking-wide'
           >
-            <a href='mailto:mrnoyon.cse@gmail.com' className='hover:text-accent transition-all break-all'>
-              mrnoyon.cse@gmail.com
+            <a href='mailto:mahfujarx@gmail.com' className='hover:text-accent transition-all break-all'>
+              mahfujarx@gmail.com
             </a>
             <span className='hidden sm:inline text-white/30'>·</span>
             <a href='tel:+8801747430802' className='hover:text-accent transition-all'>
@@ -51,6 +51,10 @@ const Contact = () => {
             </a>
             <span className='hidden sm:inline text-white/30'>·</span>
             <span>Rangpur, BD</span>
+            <span className='hidden sm:inline text-white/30'>·</span>
+            <a href='/Mahfujar_Rahman_Python_Data_Engineer.pdf' target='_blank' rel='noopener noreferrer' className='hover:text-accent transition-all'>
+              Résumé (PDF)
+            </a>
           </motion.div>
           <motion.form
             onSubmit={handleSubmit}
