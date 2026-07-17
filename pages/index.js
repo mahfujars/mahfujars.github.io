@@ -80,9 +80,20 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex justify-center xl:justify-start"
+            className="flex justify-center xl:justify-start items-center gap-3 sm:gap-4 flex-wrap"
           >
             <ProjectsBtn />
+            <a
+              href="/Mahfujar_Rahman_Python_Data_Engineer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download résumé"
+              className="group inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/25 font-mono text-sm text-white/90 hover:border-accent hover:text-accent transition-all"
+            >
+              <span className="text-accent">$</span>
+              <span className="opacity-80">cat</span>
+              <span>résumé.pdf</span>
+            </a>
           </motion.div>
         </div>
       </div>
