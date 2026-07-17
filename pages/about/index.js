@@ -22,6 +22,13 @@ import { TbApi, TbRobot, TbRegex } from "react-icons/tb";
 //  data
 export const aboutData = [
   {
+    title: "experience",
+    info: [
+      { title: "Python Data Engineer — LOBSTR.IO", stage: "Oct 2022 — Jul 2026" },
+      { title: "Junior IT Executive — WSDA NZ", stage: "Aug — Oct 2022" },
+    ],
+  },
+  {
     title: "skills",
     info: [
       {
@@ -61,13 +68,6 @@ export const aboutData = [
       { title: "LEDP Top Earner — ICT Division", stage: "2020" },
       { title: "Asst. Country Director — Youth Summit", stage: "—" },
       { title: "Campus Ambassador — ICT Olympiad BD", stage: "—" },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      { title: "Python Data Engineer — LOBSTR.IO", stage: "Oct 2022 — Jul 2026" },
-      { title: "Junior IT Executive — WSDA NZ", stage: "Aug — Oct 2022" },
     ],
   },
   {
@@ -142,7 +142,7 @@ const About = () => {
             <div className="flex flex-1 gap-x-3 sm:gap-x-6 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
-                  <CountUp start={0} end={3} duration={4} />+
+                  <CountUp start={0} end={4} duration={4} />
                 </div>
                 <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
                   years exp
@@ -150,23 +150,23 @@ const About = () => {
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
-                  <CountUp start={0} end={40} duration={6} />+
+                  <CountUp start={0} end={21} duration={6} />
                 </div>
                 <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
-                  crawlers
+                  scrapers
                 </div>
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
-                  <CountUp start={0} end={10} duration={6} />M+
+                  <CountUp start={0} end={786} duration={6} />K
                 </div>
                 <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
-                  records
+                  records/wk
                 </div>
               </div>
               <div className="relative flex-1">
                 <div className="text-xl sm:text-3xl xl:text-4xl font-extrabold text-accent mb-1">
-                  <CountUp start={0} end={5} duration={6} />+
+                  <CountUp start={0} end={3} duration={6} />
                 </div>
                 <div className="text-[10px] sm:text-xs uppercase tracking-[1px] leading-[1.4] max-w-[80px] sm:max-w-[100px] mx-auto xl:mx-0">
                   anti-bot
