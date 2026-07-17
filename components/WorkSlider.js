@@ -41,10 +41,10 @@ const workSlides = {
           href: 'https://github.com/mahfujars/sweetchat-nextjs',
         },
         {
-          title: 'Portfolio',
-          stack: 'Next.js · Tailwind · Framer',
+          title: 'Sia.Ch Crawler',
+          stack: 'SQLAlchemy · MySQL · AES',
           path: '/thumb4.jpg',
-          href: 'https://github.com/mahfujars/mahfujars.github.io',
+          href: 'https://github.com/mahfujars/sia',
         },
       ],
     },

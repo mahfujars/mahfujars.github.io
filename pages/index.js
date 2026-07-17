@@ -88,11 +88,15 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download résumé"
-              className="group inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/25 font-mono text-sm text-white/90 hover:border-accent hover:text-accent transition-all"
+              className="group relative inline-flex items-center rounded-lg overflow-hidden p-[1.5px]"
             >
-              <span className="text-accent">$</span>
-              <span className="opacity-80">cat</span>
-              <span>résumé.pdf</span>
+              <span className="absolute inset-0 bg-[conic-gradient(from_180deg,#F13024,#22d3ee,#3b82f6,#F13024,#a855f7,#F13024)] animate-[spin_6s_linear_infinite]"></span>
+              <span className="relative inline-flex items-center gap-2 px-5 py-3 rounded-[6px] bg-black/80 backdrop-blur font-mono text-sm text-white/90">
+                <span className="text-accent">$</span>
+                <span className="opacity-80">cat</span>
+                <span className="text-accent">résumé.pdf</span>
+                <span className="ml-2 inline-block w-2 h-4 bg-accent animate-pulse"></span>
+              </span>
             </a>
           </motion.div>
         </div>
