@@ -96,24 +96,26 @@ const ServiceSlider = () => {
         })}
       </Swiper>
 
-      {/* arrows overlaying the card edges */}
-      <button
-        onClick={() => swiper && swiper.slidePrev()}
-        aria-label='Previous'
-        className='absolute z-10 left-1 sm:-left-3 top-[42%] -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-black/60 backdrop-blur border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
-      >
-        <BsChevronLeft />
-      </button>
-      <button
-        onClick={() => swiper && swiper.slideNext()}
-        aria-label='Next'
-        className='absolute z-10 right-1 sm:-right-3 top-[42%] -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-black/60 backdrop-blur border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
-      >
-        <BsChevronRight />
-      </button>
-
-      {/* pagination dots, centered below the cards */}
-      <div className='svc-pagination !flex items-center justify-center gap-2 mt-5'></div>
+      {/* arrows + dots, tight centered cluster below the cards */}
+      <div className='flex justify-center mt-5'>
+        <div className='inline-flex items-center gap-4'>
+          <button
+            onClick={() => swiper && swiper.slidePrev()}
+            aria-label='Previous'
+            className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+          >
+            <BsChevronLeft />
+          </button>
+          <div className='svc-pagination inline-flex items-center gap-2'></div>
+          <button
+            onClick={() => swiper && swiper.slideNext()}
+            aria-label='Next'
+            className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+          >
+            <BsChevronRight />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
