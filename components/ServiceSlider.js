@@ -1,12 +1,11 @@
 // swiper react
-import { useRef } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 // icons
 import { RxArrowTopRight } from 'react-icons/rx';
@@ -15,7 +14,7 @@ import { FaPython, FaAws, FaShieldAlt, FaFlask } from 'react-icons/fa';
 import { TbDatabaseImport, TbApi } from 'react-icons/tb';
 
 // modules
-import { FreeMode, Pagination, Navigation, Keyboard } from 'swiper/modules';
+import { FreeMode, Pagination, Keyboard } from 'swiper/modules';
 
 // data — ordered by depth of expertise
 const serviceData = [
@@ -58,42 +57,37 @@ const serviceData = [
 ];
 
 const ServiceSlider = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const [swiper, setSwiper] = useState(null);
 
   return (
     <div className='relative'>
       <Swiper
+        onSwiper={setSwiper}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 15 },
           640: { slidesPerView: 3, spaceBetween: 15 },
         }}
         freeMode={true}
-        keyboard={{ enabled: true }}
-        pagination={{ clickable: true }}
-        navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-        modules={[FreeMode, Pagination, Navigation, Keyboard]}
-        className='h-[240px] sm:h-[340px]'
+        keyboard={{ enabled: true, onlyInViewport: true }}
+        pagination={{ el: '.svc-pagination', clickable: true }}
+        modules={[FreeMode, Pagination, Keyboard]}
+        className='h-[230px] sm:h-[300px]'
       >
         {serviceData.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className='bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'>
+              <div className='bg-[rgba(65,47,123,0.15)] h-full rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'>
                 {/* icons */}
                 <div className='text-4xl text-accent mb-4'>{item.icon}</div>
                 {/* title & desc */}
-                <div className='mb-8'>
+                <div className='mb-4'>
                   <div className='mb-2 text-lg'>{item.title}</div>
-                  <p className='max-w-[350px] leading-normal'>
+                  <p className='max-w-[350px] leading-normal text-sm sm:text-base'>
                     {item.description}
                   </p>
                 </div>
                 {/* arrow */}
-                <div className='text-3xl'>
+                <div className='text-3xl mt-auto'>
                   <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-accent transition-all duration-300' />
                 </div>
               </div>
@@ -102,21 +96,24 @@ const ServiceSlider = () => {
         })}
       </Swiper>
 
-      {/* nav arrows */}
-      <button
-        ref={prevRef}
-        aria-label='Previous'
-        className='absolute z-10 left-0 sm:-left-4 top-[38%] -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-black/60 backdrop-blur border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all [&.swiper-button-disabled]:opacity-30 [&.swiper-button-disabled]:cursor-default'
-      >
-        <BsChevronLeft />
-      </button>
-      <button
-        ref={nextRef}
-        aria-label='Next'
-        className='absolute z-10 right-0 sm:-right-4 top-[38%] -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-full bg-black/60 backdrop-blur border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all [&.swiper-button-disabled]:opacity-30 [&.swiper-button-disabled]:cursor-default'
-      >
-        <BsChevronRight />
-      </button>
+      {/* controls: arrows + pagination, below the cards */}
+      <div className='flex items-center justify-center gap-4 mt-5'>
+        <button
+          onClick={() => swiper && swiper.slidePrev()}
+          aria-label='Previous'
+          className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+        >
+          <BsChevronLeft />
+        </button>
+        <div className='svc-pagination flex items-center justify-center gap-2'></div>
+        <button
+          onClick={() => swiper && swiper.slideNext()}
+          aria-label='Next'
+          className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+        >
+          <BsChevronRight />
+        </button>
+      </div>
     </div>
   );
 };
