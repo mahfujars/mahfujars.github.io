@@ -66,8 +66,8 @@ export const aboutData = [
     info: [
       { title: "ACM-ICPC Asia Dhaka Regional", stage: "2019" },
       { title: "LEDP Top Earner — ICT Division", stage: "2020" },
-      { title: "Asst. Country Director — Youth Summit", stage: "—" },
-      { title: "Campus Ambassador — ICT Olympiad BD", stage: "—" },
+      { title: "Asst. Country Director — Youth Summit", stage: "2022" },
+      { title: "Campus Ambassador — ICT Olympiad BD", stage: "2022" },
     ],
   },
   {
