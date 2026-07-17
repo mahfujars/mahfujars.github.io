@@ -22,7 +22,7 @@ const serviceData = [
     icon: <FaPython />,
     title: 'Web Scraping',
     description:
-      'Production crawlers in Python — woob, Scrapy, Requests, lxml. Pagination, resumable runs, and clean structured output at scale.',
+      'Production crawlers in Python — woob, Scrapy, lxml. Pagination, resumable runs, clean structured output at scale.',
   },
   {
     icon: <TbDatabaseImport />,
@@ -34,7 +34,7 @@ const serviceData = [
     icon: <FaFlask />,
     title: 'Data Quality',
     description:
-      'Price-drift detection, historical-gap analysis, anomaly checks, and dataset merge validation so downstream data stays trustworthy.',
+      'Price-drift detection, gap analysis, anomaly checks, and dataset merge validation — output teams can trust.',
   },
   {
     icon: <TbApi />,
@@ -71,7 +71,7 @@ const ServiceSlider = () => {
         keyboard={{ enabled: true, onlyInViewport: true }}
         pagination={{ el: '.svc-pagination', clickable: true }}
         modules={[FreeMode, Pagination, Keyboard]}
-        className='h-[230px] sm:h-[300px]'
+        className='h-[290px] sm:h-[360px]'
       >
         {serviceData.map((item, index) => {
           return (
