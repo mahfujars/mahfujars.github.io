@@ -1,4 +1,5 @@
 // swiper react
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // swiper styles
@@ -10,6 +11,7 @@ import Image from 'next/image';
 
 // icons
 import { FaQuoteLeft } from 'react-icons/fa';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 // modules
 import { Pagination } from 'swiper/modules';
@@ -25,28 +27,26 @@ const testimonialData = [
   },
   {
     image: '/t-avt-2.jpg',
-    name: 'Rahim Ahmed',
-    position: 'Engineering Manager',
+    name: 'Ahmed W. Bari',
+    position: 'Vice President, WSDA New Zealand',
+    fit: 'object-top',
     message:
-      'Owned the crawler fleet end to end. Data-quality issues that used to take days, he caught same-day. Low-maintenance, high-trust — exactly what you want on a production scraping team.',
-  },
-  {
-    image: '/t-avt-3.jpg',
-    name: 'Farhana Islam',
-    position: 'Data Lead',
-    message:
-      'Turned a fragile scraping setup into a resumable, monitored pipeline with clean data downstream. Clear communicator and genuinely fast to ship.',
+      'Mahfujar collected, validated, and managed the data our business development and decisions relied on. Accurate, dependable, and careful with detail — exactly what you want from the person preparing your numbers.',
   },
 ];
 
 const TestimonialSlider = () => {
+  const [swiper, setSwiper] = useState(null);
+
   return (
-    <Swiper
-      spaceBetween={30}
-      pagination={{ clickable: true }}
-      modules={[Pagination]}
-      className='w-full !pb-12'
-    >
+    <div>
+      <Swiper
+        onSwiper={setSwiper}
+        spaceBetween={30}
+        pagination={{ el: '.tst-pagination', clickable: true }}
+        modules={[Pagination]}
+        className='w-full'
+      >
       {testimonialData.map((person, index) => {
         return (
           <SwiperSlide key={index}>
@@ -58,7 +58,7 @@ const TestimonialSlider = () => {
                   width={96}
                   height={96}
                   alt={person.name}
-                  className='rounded-full mb-3 w-20 h-20 sm:w-24 sm:h-24 object-cover'
+                  className={`rounded-full mb-3 w-20 h-20 sm:w-24 sm:h-24 object-cover ${person.fit || ''}`}
                 />
                 <div className='text-base sm:text-lg font-medium'>{person.name}</div>
                 <div className='text-[11px] sm:text-xs uppercase font-extralight tracking-widest text-white/60 mt-1'>
@@ -76,7 +76,29 @@ const TestimonialSlider = () => {
           </SwiperSlide>
         );
       })}
-    </Swiper>
+      </Swiper>
+
+      {/* arrows + dots, same cluster as services page */}
+      <div className='flex justify-center mt-5'>
+        <div className='inline-flex items-center gap-4'>
+          <button
+            onClick={() => swiper && swiper.slidePrev()}
+            aria-label='Previous'
+            className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+          >
+            <BsChevronLeft />
+          </button>
+          <div className='tst-pagination inline-flex items-center gap-2'></div>
+          <button
+            onClick={() => swiper && swiper.slideNext()}
+            aria-label='Next'
+            className='flex items-center justify-center w-9 h-9 rounded-full bg-black/50 border border-white/20 text-white/80 hover:border-accent hover:text-accent transition-all'
+          >
+            <BsChevronRight />
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

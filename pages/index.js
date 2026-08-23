@@ -67,8 +67,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-[90%] sm:max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-6 sm:mb-8 xl:mb-12"
           >
-            Python Data Engineer specialising in large-scale web crawlers,
-            anti-bot bypass, and ETL pipelines built with{' '}
+            Python Developer with nearly 4 years of production data-engineering
+            experience — distributed task pipelines, large-scale web crawlers,
+            anti-bot systems, and ETL built with{' '}
             <span className="text-white font-medium">
               Python, SQLAlchemy, PostgreSQL, and AWS.
             </span>
@@ -84,7 +85,7 @@ const Home = () => {
           >
             <ProjectsBtn />
             <a
-              href="/Mahfujar_Rahman_Python_Data_Engineer.pdf"
+              href="/Mahfujar_Rahman_Python_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download résumé"

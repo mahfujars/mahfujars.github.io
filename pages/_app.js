@@ -38,18 +38,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Mahfujar Rahman — Python Data Engineer</title>
+        <title>Mahfujar Rahman — Python Developer</title>
         <meta
           name='description'
-          content='Mahfujar Rahman — Python Data Engineer, ex-lobstr.io, open to new roles. Web crawlers, anti-bot bypass, and ETL pipelines with Python, SQLAlchemy, PostgreSQL, dbt, and Airflow.'
+          content='Mahfujar Rahman — Python Developer with nearly 4 years of data-engineering experience, ex-lobstr.io, open to new roles. Distributed pipelines, large-scale web crawlers, anti-bot systems, and ETL with Python, SQLAlchemy, PostgreSQL, dbt, and Airflow.'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='theme-color' content='#131424' />
         <link rel='icon' href='/logo.svg' />
-        <meta property='og:title' content='Mahfujar Rahman — Python Data Engineer' />
+        <meta property='og:title' content='Mahfujar Rahman — Python Developer' />
         <meta
           property='og:description'
-          content='Python Data Engineer — web crawlers, anti-bot bypass, and ETL pipelines at scale.'
+          content='Python Developer — distributed pipelines, large-scale web crawlers, anti-bot systems, and ETL at scale.'
         />
         <meta property='og:type' content='website' />
       </Head>

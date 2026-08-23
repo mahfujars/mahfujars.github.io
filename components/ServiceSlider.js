@@ -19,10 +19,10 @@ import { FreeMode, Pagination, Keyboard } from 'swiper/modules';
 // data — ordered by depth of expertise
 const serviceData = [
   {
-    icon: <FaPython />,
-    title: 'Web Scraping',
+    icon: <TbApi />,
+    title: 'Orchestration & Backend',
     description:
-      'Production crawlers in Python — woob, Scrapy, lxml. Pagination, resumable runs, clean structured output at scale.',
+      'Celery, RabbitMQ, Airflow, pm2 — distributed task pipelines, scheduled parallel workloads, and clean reusable Python services.',
   },
   {
     icon: <TbDatabaseImport />,
@@ -31,16 +31,16 @@ const serviceData = [
       'SQLAlchemy + PostgreSQL warehouses, dbt transforms, incremental loads, deduping, and schema design.',
   },
   {
+    icon: <FaPython />,
+    title: 'Web Scraping',
+    description:
+      'Production crawlers in Python — woob, Scrapy, lxml. Pagination, resumable runs, clean structured output at scale.',
+  },
+  {
     icon: <FaFlask />,
     title: 'Data Quality',
     description:
       'Price-drift detection, gap analysis, anomaly checks, and dataset merge validation — output teams can trust.',
-  },
-  {
-    icon: <TbApi />,
-    title: 'Orchestration & Backend',
-    description:
-      'Celery, RabbitMQ, Airflow, pm2 — scheduled, parallel, resumable crawl fleets and clean reusable Python services.',
   },
   {
     icon: <FaAws />,

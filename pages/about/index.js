@@ -24,7 +24,7 @@ export const aboutData = [
   {
     title: "experience",
     info: [
-      { title: "Python Data Engineer — LOBSTR.IO", stage: "Oct 2022 — Jul 2026" },
+      { title: "Python Developer — LOBSTR.IO", stage: "Oct 2022 — Jul 2026" },
       { title: "Junior IT Executive — WSDA NZ", stage: "Aug — Oct 2022" },
     ],
   },
@@ -125,10 +125,11 @@ const About = () => {
             exit="hidden"
             className="max-w-[600px] mx-auto xl:mx-0 mb-4 xl:mb-8 px-2 xl:px-0 text-xs sm:text-sm xl:text-base"
           >
-            I&apos;m Mahfujar — Python Data Engineer, ex-{" "}
+            I&apos;m Mahfujar — Python Developer, ex-{" "}
             <span className="text-white font-medium">lobstr.io</span>. For nearly
-            4 years I built large-scale crawlers, bypassed Datadome/PerimeterX, and
-            shipped ETL pipelines teams trust. Now{" "}
+            4 years I designed distributed task pipelines and anti-bot
+            infrastructure, built large-scale crawlers, and shipped ETL
+            pipelines teams trust. Now{" "}
             <span className="text-accent font-medium">open to new roles</span>.
           </motion.p>
           {/* counter */}

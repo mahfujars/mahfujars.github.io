@@ -32,7 +32,7 @@ const Services = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto xl:mx-0'
             >
-              Web crawling, anti-bot bypass, ETL, and backend engineering — built in Python for teams that need data they can trust at scale.
+              Backend &amp; data engineering in Python — distributed systems, pipelines, and crawlers for teams that need data they can trust at scale.
             </motion.p>
           </div>
           <motion.div

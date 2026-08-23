@@ -52,7 +52,7 @@ const Contact = () => {
             <span className='hidden sm:inline text-white/30'>·</span>
             <span>Rangpur, BD</span>
             <span className='hidden sm:inline text-white/30'>·</span>
-            <a href='/Mahfujar_Rahman_Python_Data_Engineer.pdf' target='_blank' rel='noopener noreferrer' className='hover:text-accent transition-all'>
+            <a href='/Mahfujar_Rahman_Python_Developer.pdf' target='_blank' rel='noopener noreferrer' className='hover:text-accent transition-all'>
               Résumé (PDF)
             </a>
           </motion.div>
